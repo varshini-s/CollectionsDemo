@@ -1,23 +1,29 @@
 package com.bridgelabz.collectionsdemo;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.Stack;
 
 
 public class CollectionsDemo 
 {
-	
-	
+
+
 
 	public static void main(String[] args) {
 
 		doListDemo();
 		doStackDemo();
 		doQueueDemo();
-		
+		doSetDemo();
+		doMapDemo();
+
 
 	}
 
@@ -28,35 +34,35 @@ public class CollectionsDemo
 		list.add("Ravi");
 		list.add("Vijay");
 		list.add("Ajay");
-		
+
 		Iterator<String> iterator = list.iterator();
 		while (iterator.hasNext()) 
 		{
 			System.out.println(iterator.next());
 		}
-		
+
 	}
 	private static void doStackDemo()
 	{
-		
+
 		System.out.println("Stack demo: ");
 		Stack<String> stack = new Stack<String>();
 		stack.push("aaa");
 		stack.push("bbb");
 		stack.push("ccc");
 		String elementAtTop = stack.pop();
-		
+
 		Iterator<String> iterator = stack.iterator();
 		while (iterator.hasNext()) 
 		{
 			System.out.println(iterator.next());
 		}
-		
+
 	}
-	
+
 	private static void doQueueDemo()
 	{
-		
+
 		System.out.println("Queue demo: ");
 		PriorityQueue<String> queue = new PriorityQueue<String>();
 
@@ -84,6 +90,23 @@ public class CollectionsDemo
 			System.out.println(iterator.next());
 		}
 	}
+
+	private static void doSetDemo()
+	{
+
+		System.out.println("Set demo: ");
+		Set<String> set = new LinkedHashSet<String>();
+		set.add("raj");
+		set.add("ram");
+
+		for(String element : set) 
+		{
+			System.out.println(element);
+		}
+	}
+
 	
+
+
 
 }
