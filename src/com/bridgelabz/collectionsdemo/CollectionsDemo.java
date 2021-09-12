@@ -105,7 +105,20 @@ public class CollectionsDemo
 		}
 	}
 
-	
+	private static void doMapDemo()
+	{
+		System.out.println("Map demo :");
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		map.put(100, "raj");
+		map.put(200, "amit");
+		map.put(10, "john");
+
+		for(Map.Entry<Integer, String> elementInMap : map.entrySet()) 
+		{
+			System.out.println(elementInMap.getKey()+" - "+elementInMap.getValue());
+		}
+
+	}
 
 
 
